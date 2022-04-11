@@ -4,6 +4,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
 (function() {
   "use strict";
 
@@ -34,7 +36,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -189,7 +191,7 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
@@ -254,3 +256,17 @@
   });
 
 })()
+
+var images = ['http://lorempixel.com/500/500/nature/4', 'http://lorempixel.com/500/500/nature/2', 'http://lorempixel.com/500/500/nature/3'];
+
+var index  = 0;
+var $top   = $('#hero');
+
+setInterval(function() {
+   $top.animate({ opacity: 0 }, 500, function() {
+     $top.css('background-image', 'url('+images[++index]+')');
+     $top.animate({ opacity: 1 }, 500, function() {
+       if(index === images.length) index = 0;
+     });
+   });
+}, 6000);
