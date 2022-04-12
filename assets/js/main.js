@@ -257,16 +257,32 @@
 
 })()
 
-var images = ['http://lorempixel.com/500/500/nature/4', 'http://lorempixel.com/500/500/nature/2', 'http://lorempixel.com/500/500/nature/3'];
+var images = ['.//assets/img/Header_Images/Header1.jpg', './/assets/img/Header_Images/Header2.jpg', './/assets/img/Header_Images/Header3.jpg'];
 
-var index  = 0;
+/*var index  = 0;
 var $top   = $('#hero');
 
 setInterval(function() {
    $top.animate({ opacity: 0 }, 500, function() {
-     $top.css('background-image', 'url('+images[++index]+')');
+     document.getElementById("hero").style.backgroundImage= "url(" + `${images[index]}` + ")"
      $top.animate({ opacity: 1 }, 500, function() {
        if(index === images.length) index = 0;
      });
    });
-}, 6000);
+}, 6000);*/
+
+window.addEventListener("load", startBackgroundTransition);
+
+function startBackgroundTransition() {
+  var container = document.getElementById('hero');
+
+  setInterval(function() {
+    container.style.setProperty("background-image", `url(${images[1]})`);
+    container.animate({ opacity: 1 }, 500, function(){
+       if(index === images.length) index = 0;
+    })
+  images.push(images.shift());
+}, 6000)
+}
+
+console.log(images[1])
