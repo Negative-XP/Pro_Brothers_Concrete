@@ -223,6 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h1 {
   margin: 0 0 10px 0;
+  margin-left: 30px;
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
@@ -286,9 +287,10 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: ;
   bottom: 0;
   left: 0;
+  background-color: #FFC300;
 }
 .section-title p {
   margin-bottom: 0;
@@ -299,7 +301,7 @@ section {
 
 --------------------------------------------------------------*/
 .about{
-  background-color: #e6e6e6;
+  background-color: #f7f7f7;
   width: 100%;
 }
 
@@ -612,7 +614,7 @@ section {
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials{
-  background-color: #e6e6e6;
+  background-color: #f7f7f7;
 }
 
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
@@ -827,15 +829,15 @@ section {
   padding: 10px 15px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: #FFC300;
   border: 0;
   padding: 10px 24px;
-  color: #fff;
+  color: black;
   transition: 0.4s;
   border-radius: 4px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  background: #fcd65d;
 }
 @-webkit-keyframes animate-loading {
   0% {
