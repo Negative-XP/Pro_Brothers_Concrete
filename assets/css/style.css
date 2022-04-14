@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: #fcd65d;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main {
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
 @media (max-width: 1199px) {
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: #fcd65d;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -298,6 +298,12 @@ section {
 # About
 
 --------------------------------------------------------------*/
+.about{
+  background-color: #e6e6e6;
+  width: 100%;
+}
+
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -325,50 +331,6 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts {
-  padding-bottom: 30px;
-}
-.facts .count-box {
-  padding: 30px;
-  width: 100%;
-}
-.facts .count-box i {
-  display: block;
-  font-size: 44px;
-  color: #149ddd;
-  float: left;
-  line-height: 0;
-}
-.facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
-}
-.facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #122f57;
-}
-.facts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #122f57;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-.facts .count-box a:hover {
-  color: #1f5297;
-}
 
 /*--------------------------------------------------------------
 # Akills
@@ -612,10 +574,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: #fcd65d;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid;
 }
 .services .icon i {
   color: #fff;
@@ -626,7 +588,7 @@ section {
   background: #fff;
 }
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: #fcd65d;
 }
 .services .title {
   margin-left: 80px;
@@ -638,7 +600,7 @@ section {
   color: #343a40;
 }
 .services .title a:hover {
-  color: #149ddd;
+  color: #fcd65d;
 }
 .services .description {
   margin-left: 80px;
@@ -649,6 +611,10 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+.testimonials{
+  background-color: #e6e6e6;
+}
+
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
   overflow: hidden;
 }
