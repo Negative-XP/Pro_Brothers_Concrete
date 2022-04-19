@@ -143,22 +143,7 @@
     });
   }
 
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
+
 
   /**
    * Porfolio isotope and filter
@@ -257,7 +242,7 @@
 
 })()
 
-var images = ['.//assets/img/Header_Images/Header1.jpg', './/assets/img/Header_Images/Header2.jpg', './/assets/img/Header_Images/Header3.jpg'];
+var images = ['.//assets/img/Header_Images/Header4.jpg', './/assets/img/Header_Images/Header5.jpg', './/assets/img/Header_Images/Header6.jpg'];
 
 /*var index  = 0;
 var $top   = $('#hero');
@@ -272,17 +257,20 @@ setInterval(function() {
 }, 6000);*/
 
 window.addEventListener("load", startBackgroundTransition);
-
+var element = document.getElementById("hero");
 function startBackgroundTransition() {
   var container = document.getElementById('hero');
 
   setInterval(function() {
-    container.style.setProperty("background-image", `url(${images[1]})`);
     container.animate({ opacity: 1 }, 500, function(){
        if(index === images.length) index = 0;
     })
+    container.style.setProperty("background-image", `url(${images[1]})`);
+    element.classList.remove("run-animation");
+   void element.offsetWidth;
+   element.classList.add("run-animation");
+   console.log(element)
   images.push(images.shift());
-}, 6000)
+}, 9000)
 }
-
-console.log(images[1])
+"use strict";
