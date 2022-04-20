@@ -25,6 +25,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: font-family: 'Roboto Slab', serif;
+
 }
 
 /*--------------------------------------------------------------
@@ -223,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes breath{
-    0% { background-size: 150% auto; }
+    0% { background-size: 180% auto; }
     100% {background-size: 125% auto; }
 }
 
@@ -275,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   @keyframes breath{
-      0% { background-size: 250% auto; }
+      0% { background-size: 270% auto; }
       100% {background-size: 233% auto; }
   }
 }
@@ -364,6 +365,10 @@ color: #fcd65d;}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services h2, p, h4 {color: #fcd65d }
+.services{
+  background-color: black;
+}
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -407,6 +412,7 @@ color: #fcd65d;}
   line-height: 24px;
   font-size: 14px;
 }
+
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -493,12 +499,22 @@ color: #fcd65d;}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact h2{
+  color: #FFC300;
+}
+
 .contact {
+  background-color: #000;
   padding-bottom: 130px;
+
+}
+
+.contact-p{
+  color: #FFC300;
 }
 .contact .info {
   padding: 30px;
-  background: #fff;
+  background: #FFC300;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
@@ -520,13 +536,14 @@ color: #fcd65d;}
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: black;
 }
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: black;
+  font-weight: bold;
 }
 .contact .info .email p {
   padding-top: 5px;
@@ -559,7 +576,7 @@ color: #fcd65d;}
 .contact .php-email-form {
   width: 100%;
   padding: 30px;
-  background: #fff;
+  background: #FFC300;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 .contact .php-email-form .form-group {
@@ -627,10 +644,10 @@ color: #fcd65d;}
   padding: 10px 15px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #FFC300;
+  background: black;
   border: 0;
   padding: 10px 24px;
-  color: black;
+  color: #FFC300;
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -654,6 +671,10 @@ color: #fcd65d;}
   }
 }
 
+
+.php-email-form p{
+  color: black;
+}
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
