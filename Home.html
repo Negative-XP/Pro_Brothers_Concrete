@@ -263,31 +263,48 @@
 </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/mdobwqwa" method="post" role="form" class="php-email-form" id="FC">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="Name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="Email" id="email" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
+              <div class="row">
+              <div class="form-group col-md-6">
+                <label for="cars">Project Type</label>
+                <br>
+                <select name="Project" id="name" class="form-control">
+                    <option value="Select">Select Project</option>
+                    <option value="Driveways">Driveway</option>
+                    <option value="Patio">Patio</option>
+                    <option value="Stairs">Stairs</option>
+                    <option value="Retaining Wall">Retaining Wall</option>
+                    <option value="Basement">Basement</option>
+                    <option value="Decorative">Decorative</option>
+                    <option value="Sidewalk">Sidewalk</option>
+                  </select>
+                </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Phone Number</label>
+                    <input type="text" name="Number" class="form-control" id="email" required>
+                  </div>
+                </div>
+
+
               <div class="form-group">
                 <label for="name">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
+              <div class="form-group">
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <h4 id="HS"></h4>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Submit</button></div>
             </form>
           </div>
 
@@ -295,7 +312,6 @@
 
       </div>
     </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -329,6 +345,43 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Contact Form !-->
+  <script>
+    var form = document.getElementById('FC');
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById('HS');
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+</script>
+
 
 </body>
 

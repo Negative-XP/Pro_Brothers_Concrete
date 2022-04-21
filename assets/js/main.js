@@ -242,7 +242,9 @@
 
 })()
 
-var images = ['.//assets/img/Header_Images/Header4.jpg', './/assets/img/Header_Images/Header5.jpg', './/assets/img/Header_Images/Header6.jpg'];
+var images = ['.//assets/img/Header_Images/Header1.jpg','.//assets/img/Header_Images/Header2.jpg','.//assets/img/Header_Images/Header3.jpg',
+'.//assets/img/Header_Images/Header4.jpg', './/assets/img/Header_Images/Header5.jpg', './/assets/img/Header_Images/Header6.jpg','.//assets/img/Header_Images/Header7.jpg',
+'.//assets/img/Header_Images/Header8.jpg'];
 
 /*var index  = 0;
 var $top   = $('#hero');
