@@ -110,8 +110,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
+  background: #ffffff;
+  color: #FFC300;
   text-decoration: none;
 }
 
@@ -303,7 +303,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #000;
+  color: #ffC300;
 }
 .section-title h2::after {
   content: "";
@@ -327,10 +327,10 @@ section {
 .about{
   background-color: black;
   width: 100%;
-  color: #fcd65d;
+  color: #FFC300;
 }
 .about h2{
-color: #fcd65d;}
+color: #FFC300;}
 
 .about .content h3 {
   font-weight: 700;
@@ -366,7 +366,7 @@ color: #fcd65d;}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services h2, p, h4 {color: #fcd65d }
+.services h2, p, h4 {color: #FFC300 }
 .services{
   background-color: black;
 }
@@ -380,7 +380,7 @@ color: #fcd65d;}
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #fcd65d;
+  background: #FFC300;
   border-radius: 50%;
   transition: 0.5s;
   border: 1px solid;
@@ -399,7 +399,7 @@ color: #fcd65d;}
 .services .title {
   margin-left: 80px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-top: 18px;
   font-size: 18px;
 }
 .services .title a {
@@ -521,11 +521,11 @@ color: #fcd65d;}
 }
 .contact .info i {
   font-size: 20px;
-  color: black;
+  color: #FFC300;
   float: left;
   width: 44px;
   height: 44px;
-  background: #ffd759;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -567,12 +567,12 @@ color: #fcd65d;}
   margin-right: 10px;
 }
 .contact .info .social-links a:hover {
-  background: #149ddd;
-  color: #ffd759;
+  background: #fffff;
+  color: #FFC300;
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: black;
-  color: #ffd759;
+  background: #ffffff;
+  color: #FFC300;
 }
 .contact .php-email-form {
   width: 100%;
