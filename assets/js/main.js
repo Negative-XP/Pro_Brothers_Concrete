@@ -276,3 +276,22 @@ function startBackgroundTransition() {
 }, 9000)
 }
 "use strict";
+
+var countdown_call = '';
+var time_count = 0;
+
+const myPopUp = document.getElementById('popup')
+function showPopUp(){
+	myPopUp.style.display="block";
+  myPopUp.classList.add("pop-animation")
+}
+setTimeout(showPopUp,5000);
+
+function ClosePopUp(){
+	myPopUpup.style.display="none";
+}
+setTimeout(ClosePopUp,120000)
+
+function ClosePopUp(){
+	myPopUp.style.display="none";
+}
