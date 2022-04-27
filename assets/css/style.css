@@ -378,8 +378,8 @@ color: #FFC300;}
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 30px;
+  height: 30px;
   background: #FFC300;
   border-radius: 50%;
   transition: 0.5s;
@@ -399,7 +399,7 @@ color: #FFC300;}
 .services .title {
   margin-left: 80px;
   font-weight: 700;
-  margin-top: 18px;
+  margin-top: 3px;
   font-size: 18px;
 }
 .services .title a {
@@ -491,10 +491,10 @@ color: #FFC300;}
   height: 12px;
   background-color: #FFC300;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid #2b2b2b;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: #2b2b2b;
 }
 
 /*--------------------------------------------------------------
