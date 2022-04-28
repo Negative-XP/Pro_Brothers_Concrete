@@ -247,38 +247,29 @@ var images = ['.//assets/img/Header_Images/Header1.jpg','.//assets/img/Header_Im
 './/assets/img/Header_Images/Header8.jpg'];
 
 
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
 
 
 
 window.addEventListener("load", startBackgroundTransition);
 var element = document.getElementById("hero");
-function startBackgroundTransition() {
-  var container = document.getElementById('hero');
+var container = document.getElementById('hero');
+  function startBackgroundTransition() {
 
   setInterval(function() {
-    container.animate({ opacity: 0 }, 500, function(){
-         sleep(1500);
-       if(index === images.length) index = 0
+    container.animate({}, 500, function(){
+       if(index === images.length) index = 0;
     })
 
-
-    container.style.setProperty("background-image", `url(${images[1]})`);
+    container.style.setProperty("background", `url(${images[1]})`);
     element.classList.remove("run-animation");
    void element.offsetWidth;
    element.classList.add("run-animation");
-   console.log(element)
+
   images.push(images.shift());
-    container.animate({ opacity: 1 }, 1000)
+
 }, 9000)
 }
+
 "use strict";
 
 var countdown_call = '';
