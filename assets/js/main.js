@@ -246,17 +246,17 @@ var images = ['.//assets/img/Header_Images/Header1.jpg','.//assets/img/Header_Im
 './/assets/img/Header_Images/Header4.jpg', './/assets/img/Header_Images/Header5.jpg', './/assets/img/Header_Images/Header6.jpg','.//assets/img/Header_Images/Header7.jpg',
 './/assets/img/Header_Images/Header8.jpg'];
 
-/*var index  = 0;
-var $top   = $('#hero');
 
-setInterval(function() {
-   $top.animate({ opacity: 0 }, 500, function() {
-     document.getElementById("hero").style.backgroundImage= "url(" + `${images[index]}` + ")"
-     $top.animate({ opacity: 1 }, 500, function() {
-       if(index === images.length) index = 0;
-     });
-   });
-}, 6000);*/
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+
 
 window.addEventListener("load", startBackgroundTransition);
 var element = document.getElementById("hero");
@@ -264,15 +264,19 @@ function startBackgroundTransition() {
   var container = document.getElementById('hero');
 
   setInterval(function() {
-    container.animate({ opacity: 1 }, 500, function(){
-       if(index === images.length) index = 0;
+    container.animate({ opacity: 0 }, 500, function(){
+         sleep(1500);
+       if(index === images.length) index = 0
     })
+
+
     container.style.setProperty("background-image", `url(${images[1]})`);
     element.classList.remove("run-animation");
    void element.offsetWidth;
    element.classList.add("run-animation");
    console.log(element)
   images.push(images.shift());
+    container.animate({ opacity: 1 }, 1000)
 }, 9000)
 }
 "use strict";
@@ -285,7 +289,7 @@ function showPopUp(){
 	myPopUp.style.display="block";
   myPopUp.classList.add("pop-animation")
 }
-setTimeout(showPopUp,5000);
+setTimeout(showPopUp,10000);
 
 function ClosePopUp(){
 	myPopUpup.style.display="none";
