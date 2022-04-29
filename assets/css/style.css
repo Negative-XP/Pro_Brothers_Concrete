@@ -205,11 +205,12 @@ h1, h2, h3, h4, h5, h6 {
   background: url('../img/hero-bg.jpg') center center;
   background-color: #000;
   background-size: cover;
+  background-position: center center !important;
 
 }
 
 .run-animation{
-    animation: breath 10s ease-in-out infinite;
+    animation: breath 11s ease-in-out infinite;
 
 }
 
@@ -227,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 1;
-
+  background-position: center center !important;
 }
 #hero:after{
   animation: fade 10s ease-in-out infinite;
@@ -325,8 +326,8 @@ video {
     margin-bottom: 30px;
   }
   @keyframes breath{
-      0% { background-size: 270% auto; }
-      100% {background-size: 233% auto; }
+      0% { background-size: 290% auto; }
+      100% {background-size: 260% auto; }
   }
 
   .videos {
