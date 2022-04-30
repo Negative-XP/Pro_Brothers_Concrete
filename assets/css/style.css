@@ -202,6 +202,77 @@ section {
   left: 0;
 }
 
+
+
+.row section{
+  height: 75vh;
+}
+
+.smallerphoto{
+  background-image: url('../img/Backgroundimages/Background1.jpg');
+  float: left;
+  display: inline-block;
+  height: 55vh;
+  background-size: cover;
+  width: 100%;
+}
+.smallerphoto2{
+  background-image: url('../img/Backgroundimages/Background2.jpg');
+  float: left;
+  width: 100%;
+  display: inline-block;
+  height: 40vh;
+  background-size: cover;
+  background-position: right center;
+}
+.smallerphoto3{
+  background-image: url('../img/Backgroundimages/Background4.jpg');
+  float: left;
+  width: 100%;
+  display: inline-block;
+  height: 40vh;
+  background-size: cover;
+}
+.smallerphoto4{
+  background-image: url('../img/Backgroundimages/Background5.jpg');
+  float: left;
+  width: 100%;
+  display: inline-block;
+  height: 40vh;
+  background-size: cover;
+}
+.smallerphoto5{
+  background-image: url('../img/Backgroundimages/Background3.jpg');
+  float: left;
+  width: 100%;
+  display: inline-block;
+  height: 40vh;
+  background-size: cover;
+}
+.smallerphoto6{
+  background-image: url('../img/Backgroundimages/Background6.jpg');
+  float: left;
+  width: 100%;
+  display: inline-block;
+  height: 40vh;
+  background-size: cover;
+}
+
+
+.spantext{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-top: 25% !important;
+  color: #ffC300;
+  font-weight: bold;
+  font-size: 5vh
+
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
